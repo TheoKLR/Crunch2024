@@ -7,7 +7,14 @@ import {Ethique} from './screens/Ethique.tsx';
 import {Environnement} from './screens/Environnement.tsx';
 import {Securite} from './screens/Securite.tsx';
 
+
 function App() {
+
+    localStorage.setItem("scoreGlobal", "0");
+    localStorage.setItem("scoreEnvironnement", "0");
+    localStorage.setItem("scoreEthique", "0");
+    localStorage.setItem("scoreSecurite", "0");
+
   return (
     <Router>        
         <Routes>
