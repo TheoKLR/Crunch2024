@@ -31,7 +31,7 @@ export const QuestionCM = (props) => {
         const intNewScore = intScore + totalScore;
         localStorage.setItem("score"+typeQuiz, ""+intNewScore)
 
-        if (totalScore <=0 ){ //rajout
+        if (totalScore <=0 ){ 
             const bilanFinal = localStorage.getItem("bilanFinal");
             const newBilanFinal = bilanFinal ? bilanFinal + "/" + texteReponse : texteReponse;
             localStorage.setItem("bilanFinal", newBilanFinal);

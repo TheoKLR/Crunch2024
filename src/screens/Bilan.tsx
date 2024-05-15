@@ -20,7 +20,7 @@ export const Bilan = () => {
                         <img src={introMain} alt="Personnage de présentation" id='perso'/>
                     </div>
                     <div className='AppContenu'>
-                        <div className='noteGlobale'>
+                        <div className='noteGlobale' id='noteBilan'>
                             <h2>Votre moyenne générale</h2>
                             <h1>{localStorage.getItem("scoreGlobal")}/20</h1>
                         </div>
