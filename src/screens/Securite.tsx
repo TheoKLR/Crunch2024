@@ -25,7 +25,7 @@ export const Securite = () => {
 
                     <QuestionCM intitule="Les employés sont-ils sensibilisés aux risques de cybersécurité et aux bonnes pratiques de sécurité des données?" reponses={[["Non",0],["1 fois sur la carrière",0],["1 fois tous les 5 ans",0],["Au moins 1 fois par ans",2]]} typeQuiz="Securite" texteReponse="- Sensibilisez vos employés aux risques de cybersécurité au moins 1 fois par an."/>
 
-                    <QuestionCM intitule="L'entreprise dispose-t-elle d'un plan de continuité d'activité et/ou de reprise après sinistre pour assurer la disponibilité des données et des systèmes en cas de sinistre majeur ?" reponses={[["Non",0],["Oui mais pas de tests réguliers",2],["Serveur local",0.5]]} typeQuiz="Securite" texteReponse="- Mettez en place un plan de continuité d’activité en cas de sinistre pour assurer la disponibilité des données."/>
+                    <QuestionCM intitule="L'entreprise dispose-t-elle d'un plan de continuité d'activité et/ou de reprise après sinistre pour assurer la disponibilité des données et des systèmes en cas de sinistre majeur ?" reponses={[["Non",0],["Oui et tests au moins une fois par an",2],["Oui mais pas de tests réguliers",0.5]]} typeQuiz="Securite" texteReponse="- Mettez en place un plan de continuité d’activité en cas de sinistre pour assurer la disponibilité des données."/>
 
                     <QuestionCM intitule="Quelles sont les solutions de protection contre les malwares et les ransomwares utilisées?" reponses={[["Aucun",0],["Antivirus pour chaque appareil",1],["Firewall",2],["Messagerie sécurisée",1],["Gestion des identités et des accès IAM",1],["Confier sa sécurité à un fournisseur tier (MSSP)",1]]} typeQuiz="Securite" texteReponse="- Mettez en place des solutions de protection contre les malwares et ransomwares."/>
 
@@ -33,6 +33,7 @@ export const Securite = () => {
 
                     <QuestionVF intitule="Des audits de conformité aux réglementations en vigueur sur la protection des données sont-ils effectués régulièrement ?" ponderationV={2} ponderationF={0} typeQuiz="Securite" texteReponse="-Faites des audits de conformité aux réglementations en vigueur sur la protection des données au moins 1 fois par an ou en respectant les règles que vous suivez (RGPD...)."/>
 
+                    <button className='button-36'><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link></button>
         </div>
     );
 }

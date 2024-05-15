@@ -11,12 +11,25 @@ import {Bilan} from './screens/Bilan.tsx';
 
 function App() {
 
+  if (!localStorage.getItem("scoreGlobal")) {
     localStorage.setItem("scoreGlobal", "0");
-    localStorage.setItem("scoreEnvironnement", "0");
-    localStorage.setItem("scoreEthique", "0");
-    localStorage.setItem("scoreSecurite", "0");
-    localStorage.setItem("bilanFinal", "");
+}
 
+if (!localStorage.getItem("scoreEnvironnement")) {
+    localStorage.setItem("scoreEnvironnement", "0");
+}
+
+if (!localStorage.getItem("scoreEthique")) {
+    localStorage.setItem("scoreEthique", "0");
+}
+
+if (!localStorage.getItem("scoreSecurite")) {
+    localStorage.setItem("scoreSecurite", "0");
+}
+
+if (!localStorage.getItem("bilanFinal")) {
+    localStorage.setItem("bilanFinal", "");
+}
   return (
     <Router>        
         <Routes>

@@ -6,6 +6,7 @@ import badgeDiamant from './diamant-det.png';
 import Emeraude from './emeraude-det.png';
 import Saphir from './saphir-det.png';
 import Rubis from './rubis-det.png';
+import badgeInvisible from './vide-det.png';
 import React from 'react';
 
 export const Home = () => {
@@ -42,6 +43,7 @@ export const Home = () => {
                     <div className='noteGlobale'>
                         <h2>Votre moyenne générale</h2>
                         <h1>{displayScore}/20</h1>
+                        {scoreGlobal < 16 && <img src={badgeInvisible} alt="badge" />}
                         {scoreGlobal >= 16 && scoreGlobal < 18 && <img src={badgeArgent} alt="badge" />}
                         {scoreGlobal >= 18 && scoreGlobal < 20 && <img src={badgeOr} alt="badge" />}
                         {scoreGlobal >= 20 && <img src={badgeDiamant} alt="badge" />}
@@ -50,17 +52,20 @@ export const Home = () => {
                         <div className='categorie'>
                             <button className="button-36"><Link to="/environnement" style={{ color: 'white', textDecoration: 'none' }}>Environnement</Link></button>
                             <h2>{scoreEnvironnement20}/20</h2>
-                            {parseInt(scoreEnvironnement20) > 16 && <img src={Emeraude} alt="badge" />}
+                            {parseInt(scoreEnvironnement20) < 16 && <img src={badgeInvisible} alt="badge" />}
+                            {parseInt(scoreEnvironnement20) >= 16 && <img src={Emeraude} alt="badge" />}
                         </div>
                         <div className="categorie">
                             <button className="button-36"><Link to="/securite" style={{ color: 'white', textDecoration: 'none' }}>Sécurité</Link></button>
                             <h2>{scoreSecurite20}/20</h2>
-                            {parseInt(scoreSecurite20) > 16 && <img src={Rubis} alt="badge" />}
+                            {parseInt(scoreSecurite20) <16 && <img src={badgeInvisible} alt="badge" />}
+                            {parseInt(scoreSecurite20) >= 16 && <img src={Rubis} alt="badge" />}
                         </div>
                         <div className='categorie'>
                             <button className="button-36"><Link to="/ethique" style={{ color: 'white', textDecoration: 'none' }}>Ethique</Link></button>
                             <h2>{scoreEthique20}/20</h2>
-                            {parseInt(scoreEthique20) > 16 && <img src={Saphir} alt="badge" />}
+                            {parseInt(scoreEthique20) < 16 && <img src={badgeInvisible} alt="badge" />}
+                            {parseInt(scoreEthique20) >= 16 && <img src={Saphir} alt="badge" />}
                         </div>
                     </nav>
                 </div>

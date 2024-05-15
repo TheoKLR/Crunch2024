@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import introMain from './Intro-main.png';
+import introMain from './Intro-bilan.png';
 
 const TextParser = ({ text }) => {
     const lines = text.split('/');

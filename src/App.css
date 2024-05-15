@@ -104,7 +104,7 @@ nav{
 
 .categorie{
   width: 20%;
-  height: 150px;
+  height: 200px;
   margin-left: 10%;
   /*background-color: #61dafb;*/
 }
@@ -112,6 +112,7 @@ nav{
 .categorie img{
   width: 50%;
   margin: auto;
+  height: 100px;
 }
 
 #perso{
