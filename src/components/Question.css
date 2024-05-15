@@ -4,10 +4,16 @@
     background: #101a32;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.20) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.1) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     border-radius: 5px;
     text-align: left;
+}
+
+.containerHidden{
+    height: 0;
+    width: 0;
+    visibility: hidden;
 }
 
 #intitule{
@@ -57,5 +63,7 @@ label{
     height: 40px;
     margin-left: 10px;
 }
+
+
 
 

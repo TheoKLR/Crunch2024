@@ -6,6 +6,7 @@ import {Home} from './screens/Home.tsx';
 import {Ethique} from './screens/Ethique.tsx';
 import {Environnement} from './screens/Environnement.tsx';
 import {Securite} from './screens/Securite.tsx';
+import {Bilan} from './screens/Bilan.tsx';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     localStorage.setItem("scoreEnvironnement", "0");
     localStorage.setItem("scoreEthique", "0");
     localStorage.setItem("scoreSecurite", "0");
+    localStorage.setItem("bilanFinal", "");
 
   return (
     <Router>        
@@ -22,6 +24,7 @@ function App() {
           <Route path="/environnement" element={<Environnement />} />
           <Route path="/securite" element={<Securite />} />
           <Route path="/ethique" element={<Ethique />} />
+          <Route path="/Bilan" element={<Bilan />} />
         </Routes>
     </Router>
   );

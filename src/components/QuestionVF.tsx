@@ -1,50 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Question.css';
 
 export const QuestionVF = (props) => {
 
-    const { intitule, ponderationV, ponderationF, typeQuiz } = props;
+    const { intitule, ponderationV, ponderationF, typeQuiz, texteReponse } = props;
+
+    const [buttonClicked, setButtonClicked] = useState(false); 
 
     const handleSubmitV = () => {
-        if (typeQuiz === "Ethique"){
-           const scoreEthique = localStorage.getItem("scoreEthique");
-           const intScoreEthique = scoreEthique ? parseInt(scoreEthique) : 0;
-           const intNewScoreEthique = intScoreEthique + ponderationV;
-           localStorage.setItem("scoreEthique", ""+intNewScoreEthique)
-        } else if (typeQuiz === "Environnement"){
-            const scoreEnvironnement = localStorage.getItem("scoreEnvironnement");
-            const intScoreEnvironnement = scoreEnvironnement ? parseInt(scoreEnvironnement) : 0;
-            const intNewScoreEnvironnement = intScoreEnvironnement + ponderationV;
-            localStorage.setItem("scoreEnvironnement", ""+intNewScoreEnvironnement)
-        } else {
-            const scoreSecurite = localStorage.getItem("scoreSecurite");
-            const intScoreSecurite = scoreSecurite ? parseInt(scoreSecurite) : 0;
-            const intNewScoreSecurite = intScoreSecurite + ponderationV;
-            localStorage.setItem("scoreSecurite", ""+intNewScoreSecurite)
+        const score = localStorage.getItem("score"+typeQuiz);
+        const intScore = score ? parseInt(score) : 0;
+        const intNewScore = intScore + ponderationV;
+        localStorage.setItem("score"+typeQuiz, ""+intNewScore)
+
+        if (ponderationV <=0 ){ //rajout
+            const bilanFinal = localStorage.getItem("bilanFinal");
+            const newBilanFinal = bilanFinal ? bilanFinal + "/" + texteReponse : texteReponse;
+            localStorage.setItem("bilanFinal", newBilanFinal);
         }
+
+        setButtonClicked(true); 
     }
 
     const handleSubmitF = () => {
-        if (typeQuiz === "Ethique"){
-            const scoreEthique = localStorage.getItem("scoreEthique");
-            const intScoreEthique = scoreEthique ? parseInt(scoreEthique) : 0;
-            const intNewScoreEthique = intScoreEthique + ponderationF;
-            localStorage.setItem("scoreEthique", ""+intNewScoreEthique)
-         } else if (typeQuiz === "Environnement"){
-             const scoreEnvironnement = localStorage.getItem("scoreEnvironnement");
-             const intScoreEnvironnement = scoreEnvironnement ? parseInt(scoreEnvironnement) : 0;
-             const intNewScoreEnvironnement = intScoreEnvironnement + ponderationF;
-             localStorage.setItem("scoreEnvironnement", ""+intNewScoreEnvironnement)
-         } else {
-             const scoreSecurite = localStorage.getItem("scoreSecurite");
-             const intScoreSecurite = scoreSecurite ? parseInt(scoreSecurite) : 0;
-             const intNewScoreSecurite = intScoreSecurite + ponderationF;
-             localStorage.setItem("scoreSecurite", ""+intNewScoreSecurite)
-         }
+        const score = localStorage.getItem("score"+typeQuiz);
+        const intScore = score ? parseInt(score) : 0;
+        const intNewScore = intScore + ponderationF;
+        localStorage.setItem("score"+typeQuiz, ""+intNewScore)
+
+        if (ponderationF <=0 ){ //rajout
+            const bilanFinal = localStorage.getItem("bilanFinal");
+            const newBilanFinal = bilanFinal ? bilanFinal + "/" + texteReponse : texteReponse;
+            localStorage.setItem("bilanFinal", newBilanFinal);
+        }
+
+        setButtonClicked(true); 
+    }
+    
+    if (buttonClicked) {
+        return null;
     }
 
     return (
-        <div className='container'>
+        <div className="container">
             <div className='intitule'>
                 <h2 id='intitule'>{intitule}</h2>
                 <hr />
@@ -56,4 +54,5 @@ export const QuestionVF = (props) => {
         </div>      
     );
 }
+
 

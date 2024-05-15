@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './Question.css';
 
 export const QuestionCM = (props) => {
-    const { intitule, reponses, typeQuiz } = props;
+    const { intitule, reponses, typeQuiz, texteReponse } = props;
+
+    const [buttonClicked, setButtonClicked] = useState(false); 
     const [selectedAnswers, setSelectedAnswers] = useState([]);
 
     const handleCheckboxChange = (event, index) => {
@@ -24,26 +26,26 @@ export const QuestionCM = (props) => {
             totalScore += reponses[index][1];
         });
 
-        if (typeQuiz === "Ethique"){
-            const scoreEthique = localStorage.getItem("scoreEthique");
-            const intScoreEthique = scoreEthique ? parseInt(scoreEthique) : 0;
-            const intNewScoreEthique = intScoreEthique + totalScore;
-            localStorage.setItem("scoreEthique", ""+intNewScoreEthique)
-         } else if (typeQuiz === "Environnement"){
-             const scoreEnvironnement = localStorage.getItem("scoreEnvironnement");
-             const intScoreEnvironnement = scoreEnvironnement ? parseInt(scoreEnvironnement) : 0;
-             const intNewScoreEnvironnement = intScoreEnvironnement + totalScore;
-             localStorage.setItem("scoreEnvironnement", ""+intNewScoreEnvironnement)
-         } else {
-             const scoreSecurite = localStorage.getItem("scoreSecurite");
-             const intScoreSecurite = scoreSecurite ? parseInt(scoreSecurite) : 0;
-             const intNewScoreSecurite = intScoreSecurite + totalScore;
-             localStorage.setItem("scoreSecurite", ""+intNewScoreSecurite)
-         }
+        const score = localStorage.getItem("score"+typeQuiz);
+        const intScore = score ? parseInt(score) : 0;
+        const intNewScore = intScore + totalScore;
+        localStorage.setItem("score"+typeQuiz, ""+intNewScore)
+
+        if (totalScore <=0 ){ //rajout
+            const bilanFinal = localStorage.getItem("bilanFinal");
+            const newBilanFinal = bilanFinal ? bilanFinal + "/" + texteReponse : texteReponse;
+            localStorage.setItem("bilanFinal", newBilanFinal);
+        }
+
+        setButtonClicked(true); 
     };
 
+    if (buttonClicked) {
+        return null;
+    }
+
     return (
-        <div className='container'>
+        <div className="container">
             <div className='intitule'>
                 <h2 id='intitule'>{intitule}</h2>
                 <hr />

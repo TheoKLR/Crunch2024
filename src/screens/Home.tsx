@@ -14,6 +14,9 @@ export const Home = () => {
     const intScoreSecurite = scoreSecurite ? parseInt(scoreSecurite) : 0;
 
     // Calculer le score global
+    const scoreEnvironnement20 = (intScoreEnvironnement*20/17).toFixed(2);
+    const scoreEthique20 = (intScoreEnvironnement*20/30).toFixed(2);
+    const scoreSecurite20 = (intScoreSecurite*20/28).toFixed(2);
     const scoreGlobal = (intScoreEnvironnement + intScoreEthique + intScoreSecurite) / 3;
 
     // Stocker le score global dans localStorage
@@ -33,23 +36,26 @@ export const Home = () => {
                     <div className='noteGlobale'>
                         <h2>Votre moyenne générale</h2>
                         <h1>{displayScore}/20</h1>
+                        <img src="" alt="" />
                     </div>
                     <nav>
                         <div className='categorie'>
                             <button className="button-36"><Link to="/environnement" style={{ color: 'white', textDecoration: 'none' }}>Environnement</Link></button>
-                            <h2>{localStorage.getItem("scoreEnvironnement")}/20</h2>
+                            <h2>{scoreEnvironnement20}/20</h2>
                         </div>
                         <div className="categorie">
                             <button className="button-36"><Link to="/securite" style={{ color: 'white', textDecoration: 'none' }}>Sécurité</Link></button>
-                            <h2>{localStorage.getItem("scoreSecurite")}/20</h2>
+                            <h2>{scoreSecurite20}/20</h2>
                         </div>
                         <div className='categorie'>
                             <button className="button-36"><Link to="/ethique" style={{ color: 'white', textDecoration: 'none' }}>Ethique</Link></button>
-                            <h2>{localStorage.getItem("scoreEthique")}/20</h2>
+                            <h2>{scoreEthique20}/20</h2>
                         </div>
                     </nav>
                 </div>
             </div>
+            <button className='button-36'><Link to="/Bilan" style={{color: 'white', textDecoration: 'none'}}>Bilan</Link>
+            </button>
         </div>
     );
 };
