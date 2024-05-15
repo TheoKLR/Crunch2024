@@ -30,6 +30,15 @@ export const Home = () => {
     localStorage.setItem("scoreGlobal", String(scoreGlobal));
     const stringScoreGlobal = localStorage.getItem("scoreGlobal")
     const displayScore = stringScoreGlobal ? stringScoreGlobal.substring(0, 4) : "0.00";
+
+    const resetScores = () => {     //fonction pour reset les variables
+        localStorage.setItem("scoreGlobal", "0");
+        localStorage.setItem("scoreEnvironnement", "0");
+        localStorage.setItem("scoreEthique", "0");
+        localStorage.setItem("scoreSecurite", "0");
+        localStorage.setItem("bilanFinal", "");
+        window.location.reload();
+    };
     
 
     return (
@@ -37,38 +46,51 @@ export const Home = () => {
             <h1>Estimateur de Responsabilité des Données pour les Entreprises</h1>
             <div className='AppContainer'>
                 <div className='personnage'>
-                    <img src={introMain} alt="Personnage de présentation" id='perso' />
+                    <img src={introMain} alt="Personnage de présentation" id='perso'/>
                 </div>
                 <div className='AppContenu'>
                     <div className='noteGlobale'>
                         <h2>Votre moyenne générale</h2>
                         <h1>{displayScore}/20</h1>
-                        {scoreGlobal < 16 && <img src={badgeInvisible} alt="badge" />}
-                        {scoreGlobal >= 16 && scoreGlobal < 18 && <img src={badgeArgent} alt="badge" />}
-                        {scoreGlobal >= 18 && scoreGlobal < 20 && <img src={badgeOr} alt="badge" />}
-                        {scoreGlobal >= 20 && <img src={badgeDiamant} alt="badge" />}
+                        {scoreGlobal < 16 && <img src={badgeInvisible} alt="badge"/>}
+                        {scoreGlobal >= 16 && scoreGlobal < 18 && <img src={badgeArgent} alt="badge"/>}
+                        {scoreGlobal >= 18 && scoreGlobal < 20 && <img src={badgeOr} alt="badge"/>}
+                        {scoreGlobal >= 20 && <img src={badgeDiamant} alt="badge"/>}
                     </div>
                     <nav>
                         <div className='categorie'>
-                            <button className="button-36"><Link to="/environnement" style={{ color: 'white', textDecoration: 'none' }}>Environnement</Link></button>
+                            <button className="button-36"><Link to="/environnement" style={{
+                                color: 'white',
+                                textDecoration: 'none'
+                            }}>Environnement</Link></button>
                             <h2>{scoreEnvironnement20}/20</h2>
-                            {parseInt(scoreEnvironnement20) < 16 && <img src={badgeInvisible} alt="badge" />}
-                            {parseInt(scoreEnvironnement20) >= 16 && <img src={Emeraude} alt="badge" />}
+                            {parseInt(scoreEnvironnement20) < 16 && <img src={badgeInvisible} alt="badge"/>}
+                            {parseInt(scoreEnvironnement20) >= 16 && <img src={Emeraude} alt="badge"/>}
                         </div>
                         <div className="categorie">
-                            <button className="button-36"><Link to="/securite" style={{ color: 'white', textDecoration: 'none' }}>Sécurité</Link></button>
+                            <button className="button-36"><Link to="/securite" style={{
+                                color: 'white',
+                                textDecoration: 'none'
+                            }}>Sécurité</Link></button>
                             <h2>{scoreSecurite20}/20</h2>
-                            {parseInt(scoreSecurite20) <16 && <img src={badgeInvisible} alt="badge" />}
-                            {parseInt(scoreSecurite20) >= 16 && <img src={Rubis} alt="badge" />}
+                            {parseInt(scoreSecurite20) < 16 && <img src={badgeInvisible} alt="badge"/>}
+                            {parseInt(scoreSecurite20) >= 16 && <img src={Rubis} alt="badge"/>}
                         </div>
                         <div className='categorie'>
-                            <button className="button-36"><Link to="/ethique" style={{ color: 'white', textDecoration: 'none' }}>Ethique</Link></button>
+                            <button className="button-36"><Link to="/ethique" style={{
+                                color: 'white',
+                                textDecoration: 'none'
+                            }}>Ethique</Link></button>
                             <h2>{scoreEthique20}/20</h2>
-                            {parseInt(scoreEthique20) < 16 && <img src={badgeInvisible} alt="badge" />}
-                            {parseInt(scoreEthique20) >= 16 && <img src={Saphir} alt="badge" />}
+                            {parseInt(scoreEthique20) < 16 && <img src={badgeInvisible} alt="badge"/>}
+                            {parseInt(scoreEthique20) >= 16 && <img src={Saphir} alt="badge"/>}
                         </div>
                     </nav>
+                    <br/><br/><br/><br/><br/><br/>
+                    <button className='button-40' onClick={resetScores} style={{width: '12%', height: '5%'}}>Reset
+                    </button>
                 </div>
+
             </div>
             <div style={{
                 position: 'fixed',

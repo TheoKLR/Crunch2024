@@ -7,7 +7,6 @@ export const Securite = () => {
     return (
         <div>
             <h1>Page Sécurité</h1>
-                    <QuestionCM intitule="Comment sont stockées les données de l’entreprise ?" reponses={[["Cloud",0],["Serveur (datacenter)",0],["Serveur local",0]]} typeQuiz="Securite"/>
 
                     <QuestionCM intitule="Quels sont les systèmes de backup de données ?" reponses={[["Aucun",0],["On-site backup",1],["Tape Backup",1],["Cloud Backup",1],["Hybrid Backup",2]]} typeQuiz="Securite" texteReponse="- Il faut déployer un système de backup, en privilégiant le “Hybrid backup”."/>
 
