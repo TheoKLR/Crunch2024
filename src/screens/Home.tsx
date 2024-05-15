@@ -86,7 +86,7 @@ export const Home = () => {
                             {parseInt(scoreEthique20) >= 16 && <img src={Saphir} alt="badge"/>}
                         </div>
                     </nav>
-                    <br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/>
                     <button className='button-40' onClick={resetScores} style={{width: '12%', height: '5%'}}>Reset
                     </button>
                 </div>

@@ -17,7 +17,7 @@ export const Bilan = () => {
                 <h1>Page Bilan</h1>
                 <div className='AppContainer'>
                     <div className='personnage'>
-                        <img src={introMain} alt="Personnage de présentation" id='perso'/>
+                        <img src={introMain} alt="Personnage de présentation" id='perso2'/>
                     </div>
                     <div className='AppContenu'>
                         <div className='noteGlobale' id='noteBilan'>
