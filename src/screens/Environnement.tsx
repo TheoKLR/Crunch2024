@@ -8,8 +8,10 @@ export const Environnement = () => {
     return (
         <div>
             <h1>Page Environnement</h1>
+
             <QuestionVF intitule="Etes vous contents du Crunch?" ponderationV={1} ponderationF={0} typeQuiz="Environnement"/>
             <QuestionCM intitule="Etes vous contents du Crunch?" reponses={[["ouiii",2],["bof",1],["non",0]]} typeQuiz="Environnement"/>
+
             <QuestionVF intitule="Question 1.1 : Respectez-vous les règles de souveraineté des données ?" ponderationV={3} ponderationF={0} typeQuiz="Environnement"/>
             <QuestionVF intitule="Question 1.2 : Permettez vous aux personnes concernées de visualiser les données recueillies? " ponderationV={0.5} ponderationF={0} typeQuiz="Environnement"/>
             <QuestionVF intitule="Question 1.3 : Permettez-vous aux personnes concernées de modifier leurs données personnelles ? " ponderationV={0.5} ponderationF={0} typeQuiz="Environnement"/>
@@ -28,6 +30,8 @@ export const Environnement = () => {
             <QuestionVF intitule="Question 12 : L’entreprise fournit-elle une politique de confidentialité claire et accessible aux utilisateurs ?" ponderationV={1} ponderationF={0} typeQuiz="Environnement"/>
             <QuestionVF intitule="Question 13 : L’entreprise met-elle à disposition des outils permettant aux utilisateurs de contrôler leurs données et de gérer leurs préférences de confidentialité ?" ponderationV={1} ponderationF={0} typeQuiz="Environnement"/>
             <QuestionVF intitule="Question 14 : Transparence par rapport à l’utilisation des données, communiquez-vous votre utilisation des données aux utilisateurs ?" ponderationV={1} ponderationF={0} typeQuiz="Environnement"/>
+            <QuestionVF intitule="Question 15 : Communiquez-vous comment vous stockez les données aux utilisateurs ?" ponderationV={1} ponderationF={0} typeQuiz="Environnement"/>
+
             <button className='button-36'><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link></button>
         </div>
     );
