@@ -50,8 +50,8 @@ export const QuestionVF = (props) => {
                 <hr />
             </div>
             <div className='contenu'>
-               <button className='boutonVF' onClick={handleSubmitV}>Vrai</button>
-               <button className='boutonVF' onClick={handleSubmitF}>Faux</button>
+               <button className='button-36' id='boutonVF' onClick={handleSubmitV}>Oui</button>
+               <button className='button-36' id='boutonVF' onClick={handleSubmitF}>Non</button>
             </div>
         </div>      
     );

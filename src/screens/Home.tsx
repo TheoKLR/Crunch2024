@@ -18,6 +18,8 @@ export const Home = () => {
 
     // Stocker le score global dans localStorage
     localStorage.setItem("scoreGlobal", String(scoreGlobal));
+    const stringScoreGlobal = localStorage.getItem("scoreGlobal")
+    const displayScore = stringScoreGlobal ? stringScoreGlobal.substring(0, 4) : "0.00";
     
 
     return (
@@ -30,7 +32,7 @@ export const Home = () => {
                 <div className='AppContenu'>
                     <div className='noteGlobale'>
                         <h2>Votre moyenne générale</h2>
-                        <h1>{localStorage.getItem("scoreGlobal")}/20</h1>
+                        <h1>{displayScore}/20</h1>
                     </div>
                     <nav>
                         <div className='categorie'>
