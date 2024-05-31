@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# - 🏗️ Le cadre du projet : Le CRUNCH ... c'est quoi ce truc ? 🚧 -
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="pictures/crunch.png">  
+  
+Le CRUNCH en quelques mots c'est :
+- une entreprise
+- 6 étudiants
+- une problématique à résoudre
+- 3 jours
 
-## Available Scripts
+C'est un évènement auquel les étudiants en première année de spécialisation à l'Université de Technologie de Troyes participent,
+et cette année, ça a été notre tour !
 
-In the project directory, you can run:
+L'organisation est simple :
 
-### `npm start`
+Des entreprises contactent l'université avec des problématiques. Les étudiants choisissent des thématiques sur lesquels ils souhaitent travailler et le jour J,
+on les entasse dans un gros hangar où ils essaient en groupe de répondre à la problématique liée à leur thématique choisie, et ceci, le plus efficacement possible.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# - 🏗️ Le cadre du projet : Notre CRUNCH 👨‍👨‍👦‍👦 -
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pour notre CRUNCH, on a tous été membres d'une équipe de choc : 
+Pierre-Emeric BOCCARD - Thomas CHABANNES - Louis DELHOMME
+Léon HOSPITALIER - Théo KOEHLER - Japhet TANOUO
 
-### `npm test`
+Cette équipe, c'est 6 étudiants, répartis en trois spécialisations : Réseau Télécom, Informatique et Systèmes d'Information, Systèmes Numériques.
+Ca a été super puisque ça a permis une bonne mixité des profils et des compétences.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pour notre part, on a travaillé pour l'entreprise Onepoint™, une boîte française spécialisée dans la transformation numérique des entreprises.
+  
+<img src="pictures/Onepoint.png" width="269" height="55">   
+  
+En quelques chiffres c'est :
+- 2500 employés
+- plus de 20 ans d'expérience
+- 300 millions de CA
 
-### `npm run build`
+Bref, c'est pas Microsoft, mais on ne travaille pas non plus pour le boulanger d'à côté.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En tout cas, ils nous ont bien gâtés avec leur problématique, parce que parmi tous les étudiants du hangar, je crois qu'on est ceux qui ont eu à la fois le
+sujet le plus intéressant, mais aussi le plus complexe.  
+  
+Plutôt que d'expliquer le pourquoi du comment, je vous laisse juger par vous-même :
+  
+<img src="pictures/sujet.png">  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Puis, le CRUNCH, c'est techniquement 3 jours, auquels il faut enlever 
+- le temps de réalisation d'une vidéo présentant notre solution
+- le temps de rédaction d'un rapport
+- ah, mais c'est 3 jours qui commencent le mardi, et qui finissent jeudi midi, donc plutôt 2.5 jours
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En gros, on a 2 jours pour proposer une solution... Au boulot !
 
-### `npm run eject`
+# - ⚙️ Le projet en lui même : Notre organisation 📅 -
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On a bien bossé sur ces trois jours, et on s'est bien organisés surtout !  
+Sinon, je vois pas comment on aurait pu avoir le temps de finir...
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Globalement, on s'est répartis le boulot par pôles. Ici on parle de sécurité, d'éthique et d'impact écologique des données.  
+On est 6, il y a 3 thématiques, spécialisons-nous !  
+On s'est donc organisés par binômes se spécialisant sur chacun une thématique afin d'en connaître un max sur le sujet.  
+  
+En même temps de se spécialiser, on a travaillé en parallèle sur plusieurs tâches. On a au début concentré notre travail sur la recherche  
+de critères pertinents pour notre notation, puis on s'est penchés sur le dévelopmment de l'application web et l'écriture du rapport.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Étant donné que l'on avait beaucoup de compétences différentes au sein du groupe, on a essayé d'adapter les compétences de chacun afin d'être le plus efficace.  
+C'est pour cela que Théo a très vite commencé l'application web afin de proposer un bon squelette de code puisqu'il était déjà très à l'aise avec  
+l'outil que l'on souhaitait utiliser : React.  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Si je devais rétranscrire notre emploi du temps du CRUNCH, je ferai ceci :
 
-## Learn More
+<img src="pictures/emploitemps.png">  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# - ⚙️ Le projet en lui même : Notre solution 💡 -  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bon, alors c'est quoi notre solution ?
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
