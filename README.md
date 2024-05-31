@@ -1,4 +1,4 @@
-# - 🏗️ Le cadre du projet : Le CRUNCH ... c'est quoi ce truc ? 🚧 -
+# - 🏗️ Le cadre du projet : Le CRUNCH ... c'est quoi ? 🚧 -
 
 <img src="pictures/crunch.png">  
   
