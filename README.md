@@ -72,5 +72,5 @@ Si je devais rétranscrire notre emploi du temps du CRUNCH, je ferai ceci :
 
 # - ⚙️ Le projet en lui même : Notre solution 💡 -  
 
-Bon, alors c'est quoi notre solution ?
+
 
